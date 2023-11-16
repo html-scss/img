@@ -1,0 +1,35 @@
+/*
+>= 1200
+992-1199
+576-768
+460-576
+414-460
+375-414
+320-375
+*/
+@media screen and (max-width: 767px){
+      body .container .picture {
+        grid-template-columns:  1fr;
+        pointer-events: none;
+      }
+      body .container .picture .img a[href="#openModal"] figure img, body .container .picture .img a[href="#openModal_2"] figure img, body .container .picture .img a[href="#openModal_3"] figure img,
+      body .container .picture .img a[href="#openModal_4"] figure img, body .container .picture .img a[href="#openModal_5"] figure img, body .container .picture .img a[href="#openModal_6"] figure img {
+        width: 90vw;
+        height: auto;
+      }
+      }
+@media screen and (max-width: 466px){
+  body .container .text .telephone-number .number .number-content p[class=title-number] {
+    font-size: 1.5em;
+    margin: 1vw 0;
+  }
+  body .container .text .telephone-number .number .number-content p[class=p-number] {
+    font-size: 2em;
+    margin: 5vw;
+  }
+body .container .text .telephone-number a[href="#open-number"] {
+  width: 160px;
+  height: 60px;
+  font-size: 2em;
+  }  
+}

@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2, h3, a {
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+}
+
+img {
+  border-radius: 0.4vw;
+}
+
+body {
+  background-color: #FFD9B2;
+}
+body .container {
+  margin: 10px 20px;
+}
+body .container .text {
+  font-size: 1em;
+  text-align: center;
+}
+body .container .text .text-inform h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+body .container .text .text-inform p[data-text=""] {
+  margin: 20px 0;
+}
+body .container .text .telephone-number a[href="#open-number"] {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 80%;
+  left: 10px;
+  width: 250px;
+  height: 75px;
+  font-size: 3em;
+  background-color: rgb(195, 161, 80);
+  border: 5px solid #323232;
+  border-radius: 20px;
+}
+body .container .text .telephone-number a[href="#open-number"]:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+body .container .text .telephone-number .number {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: opacity 200ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+body .container .text .telephone-number .number:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+body .container .text .telephone-number .number:target ~ a[href="#open-number"] {
+  display: none;
+}
+body .container .text .telephone-number .number .number-content {
+  background-color: #FFD9B2;
+  border: 5px solid #323232;
+  border-radius: 20px;
+}
+body .container .text .telephone-number .number .number-content p[class=title-number] {
+  font-size: 2em;
+  margin: 1vw 0;
+}
+body .container .text .telephone-number .number .number-content p[class=p-number] {
+  font-size: 3em;
+  margin: 5vw;
+}
+body .container .text .telephone-number .number .number-content a {
+  opacity: 0.7;
+  z-index: 150;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+body .container .text .telephone-number .number .number-content a:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+body .container .picture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+body .container .picture .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .picture .img a[href="#openModal"] figure, body .container .picture .img a[href="#openModal_2"] figure, body .container .picture .img a[href="#openModal_3"] figure,
+body .container .picture .img a[href="#openModal_4"] figure, body .container .picture .img a[href="#openModal_5"] figure, body .container .picture .img a[href="#openModal_6"] figure {
+  margin: 20px auto;
+  transition-property: transform, opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+body .container .picture .img a[href="#openModal"] figure:hover, body .container .picture .img a[href="#openModal_2"] figure:hover, body .container .picture .img a[href="#openModal_3"] figure:hover,
+body .container .picture .img a[href="#openModal_4"] figure:hover, body .container .picture .img a[href="#openModal_5"] figure:hover, body .container .picture .img a[href="#openModal_6"] figure:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+body .container .picture .img a[href="#openModal"] figure img, body .container .picture .img a[href="#openModal_2"] figure img, body .container .picture .img a[href="#openModal_3"] figure img,
+body .container .picture .img a[href="#openModal_4"] figure img, body .container .picture .img a[href="#openModal_5"] figure img, body .container .picture .img a[href="#openModal_6"] figure img {
+  width: 35vw;
+  display: block;
+}
+body .container .picture .img a[href="#openModal"] figure figcaption p, body .container .picture .img a[href="#openModal_2"] figure figcaption p, body .container .picture .img a[href="#openModal_3"] figure figcaption p,
+body .container .picture .img a[href="#openModal_4"] figure figcaption p, body .container .picture .img a[href="#openModal_5"] figure figcaption p, body .container .picture .img a[href="#openModal_6"] figure figcaption p {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+body .container .picture .img .modal {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+body .container .picture .img .modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+body .container .picture .img .modal .modal-content {
+  margin: 4% 0;
+  display: flex;
+  justify-content: center;
+}
+body .container .picture .img .modal .modal-content img {
+  width: 80%;
+  height: auto;
+}
+body .container .picture .img .modal .modal-content a {
+  opacity: 0.7;
+  z-index: 150;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("../img-sait/img-sait/next.jpg");
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+body .container .picture .img .modal .modal-content a:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}/*# sourceMappingURL=index.css.map */

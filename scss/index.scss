@@ -1,0 +1,209 @@
+@import "index-root.scss";
+* {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar-thumb{
+    display: none;
+
+    
+}
+::-webkit-scrollbar {
+    display: none;
+
+
+}
+::-webkit-scrollbar-button {
+    display: none;
+    }
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, a {
+font-family: 'Open Sans', sans-serif;
+color: $text-color;
+}
+img {
+    border-radius: 0.4vw;
+}
+body {
+    background-color: $important-color;
+.container {
+margin: 10px 20px;
+.text {
+    font-size: 1em;
+    text-align: center;
+    .text-inform {
+    h1 {
+        font-weight: bold;
+        font-size: 3em;
+    }
+    p[data-text=""] {
+        margin: 20px 0;
+                    }
+                }   
+        .telephone-number {
+            a[href="#open-number"] {
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 80%;
+                left: 10px;
+                width: 250px;
+                height: 75px;
+                font-size: 3em;
+            background-color: rgb(195, 161, 80);
+            border: 5px solid $text-color;
+            border-radius: 20px;
+            &:hover {
+                opacity: 0.8;
+                transform: scale(1.05);
+                    }
+                }   
+
+            .number {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            background: rgba(0,0,0,0.3);
+            z-index: 100;
+            -webkit-transition: opacity 200ms ease-in; 
+            -moz-transition: opacity 200ms ease-in;
+            transition: opacity 200ms ease-in;
+            opacity: 0;
+            pointer-events: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                padding: 0;
+                &:target {
+                    opacity: 1;
+                      pointer-events: auto;
+                }
+                &:target ~ a[href="#open-number"] {
+                    display: none;
+                }
+                .number-content {
+                    background-color: $important-color;
+                    border: 5px solid $text-color;
+                    border-radius: 20px;
+                    p[class="title-number"] {
+                        font-size: 2em;
+                        margin: 1vw 0;
+                    }
+                    p[class="p-number"] {
+                        font-size: 3em;
+                        margin: 5vw;
+                        }
+                        a {
+                            opacity: 0.7;
+                            z-index: 150;
+                            position: fixed;
+                            top: 1%;
+                            left: 1%;
+                            display: block;
+                            width: 60px;
+                            height: 60px;
+                            background: url("../img-sait/img-sait/next.jpg");
+                            background-size: 100% 100%;
+                            border-radius: 20px;
+                            &:hover {
+                                opacity: 1;
+                                transform: scale(1.05);
+                            }
+                        }
+                }
+            }
+        }
+}
+.picture {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a[href="#openModal"], a[href="#openModal_2"], a[href="#openModal_3"], 
+        a[href="#openModal_4"], a[href="#openModal_5"], a[href="#openModal_6"] {
+            
+            figure {
+                margin: 20px auto;
+                transition-property: transform, opacity;
+                transition-duration: 0.1s;
+                transition-timing-function: linear;
+                &:hover {
+                    opacity: 0.8;
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 35vw;
+                display: block;
+            }
+            figcaption {
+                p {
+                    font-size: 30px;
+                text-align: center;
+                color: black;
+                }
+                        }
+                    }
+                }
+                .modal {
+                    overflow: auto;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.6);
+                    z-index: 100;
+                    opacity: 0;
+                    -webkit-transition: opacity 200ms ease-in; 
+                    -moz-transition: opacity 200ms ease-in;
+                    transition: opacity 200ms ease-in;
+                    pointer-events: none;
+                    margin: 0;
+                    padding: 0;
+                    &:target {
+                        opacity: 1;
+                          pointer-events: auto;
+                    }
+                            .modal-content {
+                                margin: 4% 0;
+                            display: flex;
+                            justify-content: center;
+                            img {
+                                width: 80%;
+                                height: auto;
+                            }
+                                    a {
+                                        opacity: 0.7;
+                                        z-index: 150;
+                                        position: fixed;
+                                        top: 1%;
+                                        left: 1%;
+                                        display: block;
+                                        width: 60px;
+                                        height: 60px;
+                                        background: url("../img-sait/img-sait/next.jpg");
+                                        background-size: 100% 100%;
+                                        border-radius: 20px;
+                                        &:hover {
+                                            opacity: 1;
+                                        transform: scale(1.05);
+                                        }
+                                    }
+                    }
+                }
+            }
+        }
+    }
+    }
+    
